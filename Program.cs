@@ -10,18 +10,10 @@ namespace integerArithmetics
     {
         static void Main(string[] args)
         { 
-            Console.WriteLine("Введите количество сотен, десятков и единиц в трёхзначном числе:");
-
-            int sotni = Convert.ToInt32(Console.ReadLine());
-            
-            int desyatki = Convert.ToInt32(Console.ReadLine());
-
-            int edinici = Convert.ToInt32(Console.ReadLine());
-            
-            Console.WriteLine("Введённое число равняется " + sotni + desyatki + edinici);
-
-            Console.WriteLine("Число после перестановки цифр десятков и единиц равно " + sotni + edinici + desyatki);
-
+            Console.WriteLine("Введите трёхзначное число: ");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            int num2 = ((num1 / 100) * 100 + ((num1 %  100) % 10) * 10 + (num1 % 100) / 10);
+            Console.WriteLine("Число после перестановки цифр десятков и единиц равно: " + num2);
             Console.ReadKey();
 
 
